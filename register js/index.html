@@ -1,0 +1,40 @@
+<!DOCTYPE html> 
+<html> 
+<head> 
+  <title>Sign Up Form</title> 
+  <link rel="stylesheet" href="style.css"> 
+</head> 
+<body> 
+ 
+  <div class="container"> 
+    <h2>Sign Up</h2> 
+    <form onsubmit="return validatePasswords()"> 
+      <label>Full Name:</label> 
+      <input type="text" name="fullname" required pattern="[A-Za-z\s]{3,}" 
+title="Only letters and spaces, min 3 characters"> 
+ 
+      <label>Email:</label> 
+      <input type="email" name="email" required title="Enter a valid email 
+address"> 
+ 
+      <label>Username:</label> 
+      <input type="text" name="username" required minlength="4" maxlength="12" 
+title="4 to 12 characters allowed"> 
+ 
+      <label>Password:</label> 
+      <input type="password" id="password" required minlength="6" title="Minimum 
+6 characters"> 
+ 
+      <label>Confirm Password:</label>
+       <input type="password" id="confirmPassword" required title="Re-enter the 
+password"> 
+ 
+      <input type="submit" value="Sign Up"> 
+    </form> 
+ 
+    <div class="success" id="successMessage"></div> 
+  </div> 
+ 
+  <script src="script.js"></script> 
+</body> 
+</html> 
